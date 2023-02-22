@@ -9,6 +9,7 @@ WATCH $0401
 *=$0900
 ;First Basic Program
 
+;PREPARE FOR PEEK
 ;set up a false byte one to simulate on a debugger the byte 1
         LDA #$FF ; all ones on the memory position 1 to switch in the kernel and charcter code and basic
         STA 1
@@ -28,7 +29,7 @@ WATCH $0401
 ;PEEK to read the desired byte using address $FD to have the address for indirect addressing
 ;10 data 120, 165, 1, 41, 252, 133, 1, 160, 0, 177, 251, 133,2, 165, 1, 9, 3, 133, 1, 88, 96
 
-        SEI     ;set interrupt flag
+        SEI       ;set interrupt flag
         ;lets swap out the rom, charracter and kernel memories
         LDA $1   ;load acummulator with memory register at 1 memory position
         AND #$FC  ;change accumulator turning off bits 6 y 7 1111 1100 to get 62k of free memory FC=252
@@ -48,8 +49,7 @@ WATCH $0401
 
 
 *=$0950
-;POKE to write the desired byte using address $FD to have the address for indirect addressing       
-;20 data 120, 165, 1, 41, 252, 133, 1, 160, 0, 165, 2, 145, 251, 165, 1, 9, 3, 133, 1, 88, 96
+;PREPARE FOR POKE
 
 
 ;set up a false byte one to simulate on a debugger the byte 1
@@ -67,8 +67,9 @@ WATCH $0401
 ;set accumulator on zero
         LDA #$00
 
-
-        SEI     ;set interrupt flag
+;POKE to write the desired byte using address $FD to have the address for indirect addressing       
+;20 data 120, 165, 1, 41, 252, 133, 1, 160, 0, 165, 2, 145, 251, 165, 1, 9, 3, 133, 1, 88, 96
+        SEI     ;set interrupt flag 
         ;lets swap out the rom, charracter and kernel memories
         LDA $1   ;load acummulator with memory register at 1 memory position
         AND #$FC  ;change accumulator turning off bits 6 y 7 1111 1100 to get 62k of free memory FC=252
