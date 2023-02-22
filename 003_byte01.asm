@@ -4,9 +4,9 @@ WATCH $0002
 WATCH $0003
 WATCH $FB
 WATCH $FC
-WATCH $0400
+WATCH $0401
 
-*=$900
+*=$0900
 ;First Basic Program
 
 ;set up a false byte one to simulate on a debugger the byte 1
@@ -46,8 +46,26 @@ WATCH $0400
         CLI     ;clear interrupt flag
         RTS
 
+
+*=$0950
 ;POKE to write the desired byte using address $FD to have the address for indirect addressing       
 ;20 data 120, 165, 1, 41, 252, 133, 1, 160, 0, 165, 2, 145, 251, 165, 1, 9, 3, 133, 1, 88, 96
+
+
+;set up a false byte one to simulate on a debugger the byte 1
+        LDA #$FF ; all ones on the memory position 1 to switch in the kernel and charcter code and basic
+        STA 1
+;store a memory position to write or read data at 251 and 251 low and hight byte
+;using 0401 to influence on the screen
+        LDA #$01
+        STA $FB
+        LDA #$04
+        STA $FC
+        LDA #$AB        ;load on byte two AB to poke into the memory position
+        STA $2
+
+;set accumulator on zero
+        LDA #$00
 
 
         SEI     ;set interrupt flag
