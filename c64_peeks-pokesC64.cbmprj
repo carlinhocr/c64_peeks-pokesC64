@@ -52,7 +52,7 @@
         <FileName>003_usrcall_byte01.asm</FileName>
         <FileName>003_move_basic_beginning.bas</FileName>
         <FileName>003_right_FRE.bas</FileName>
-        <FileName>005_GraphicBars.bas</FileName>
+        <FileName>005_GraphicBlocks.bas</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
     <PaddingByte>0</PaddingByte>
@@ -140,14 +140,14 @@
             <FileOpen>True</FileOpen>
         </SourceFile>
         <SourceFile>
-            <Name>005_GraphicBars.bas</Name>
+            <Name>005_GraphicBlocks.bas</Name>
             <PrgName />
             <FileType>1</FileType>
             <IncludeInBuild>True</IncludeInBuild>
             <Regions />
             <Breakpoints />
             <Bookmarks />
-            <Topmost>False</Topmost>
+            <Topmost>True</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>
     </SourceFiles>
