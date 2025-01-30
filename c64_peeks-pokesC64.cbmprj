@@ -58,6 +58,7 @@
         <FileName>005_ExtendedcolorMode.bas</FileName>
         <FileName>005_Multicolormode.bas</FileName>
         <FileName>005_GraphicBlocksExplanation.bas</FileName>
+        <FileName>005_MoveCharROMtoRAM.bas</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
     <PaddingByte>0</PaddingByte>
@@ -200,7 +201,7 @@
             <FileOpen>False</FileOpen>
         </SourceFile>
         <SourceFile>
-            <Name>005_Multicolormode.bas</Name>
+            <Name>005_MoveCharROMtoRAM.bas</Name>
             <PrgName />
             <FileType>1</FileType>
             <IncludeInBuild>True</IncludeInBuild>
@@ -208,6 +209,17 @@
             <Breakpoints />
             <Bookmarks />
             <Topmost>True</Topmost>
+            <FileOpen>True</FileOpen>
+        </SourceFile>
+        <SourceFile>
+            <Name>005_Multicolormode.bas</Name>
+            <PrgName />
+            <FileType>1</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>False</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>
     </SourceFiles>
